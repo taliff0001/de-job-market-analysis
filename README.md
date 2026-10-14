@@ -2,7 +2,7 @@
 
 How data engineering jobs around Roanoke compare with Virginia and the country: where the work happens (remote, hybrid, on-site), what it pays, what skills postings name, and how much experience they ask for.
 
-**Live dashboard:** [tommyaliff.com/job-market](https://tommyaliff.com/job-market/) · **Explore it yourself:** [open the notebook in Google Colab](https://colab.research.google.com/github/taliff0001/de-job-market-analysis/blob/main/colab.ipynb) (needs only a free JobsPipe API key)
+**Live dashboard:** [tommyaliff.com/job-market](https://tommyaliff.com/job-market/)
 
 ## What's in here
 
