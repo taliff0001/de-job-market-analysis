@@ -33,7 +33,11 @@ SLICES = {  # name: (filters, max jobs)
 }
 
 def load_key():
-    for line in (ROOT / ".env").read_text().splitlines():
+    import os
+    if os.environ.get("JOBSPIPE_API_KEY"):          # e.g. set from the Colab notebook
+        return os.environ["JOBSPIPE_API_KEY"].strip()
+    env = ROOT / ".env"
+    for line in (env.read_text().splitlines() if env.exists() else []):
         if line.startswith("JOBSPIPE_API_KEY="):
             return line.split("=", 1)[1].strip().strip("'\"")
     raise SystemExit("JOBSPIPE_API_KEY missing from .env")
