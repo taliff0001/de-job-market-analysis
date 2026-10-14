@@ -1,0 +1,8 @@
+# Raw postings come from JobsPipe and may not be redistributed. Pull your own with pull_jobspipe.py.
+data/raw/
+data/snapshot_report.md
+.env
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store

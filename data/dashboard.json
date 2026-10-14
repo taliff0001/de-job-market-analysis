@@ -1,0 +1,372 @@
+{
+  "generated": "2026-10-14T18:02:36+00:00",
+  "source": "JobsPipe (full descriptions), postings from the last 90 days",
+  "total_postings": 363,
+  "total_pulled": 960,
+  "groups": {
+    "Local data engineering": {
+      "n": 8,
+      "arrangement": {
+        "remote": 2,
+        "hybrid": 4,
+        "on-site": 1,
+        "unknown": 1
+      },
+      "arrangement_of_stated": {
+        "remote": 0.286,
+        "hybrid": 0.571,
+        "on-site": 0.143
+      },
+      "median_salary": 127027,
+      "salary_n": 7,
+      "years": {
+        "0-1": 1,
+        "2-3": 4,
+        "4-5": 0,
+        "6+": 1
+      },
+      "years_n": 6,
+      "median_years": 3.0,
+      "skills": {
+        "Python": 8,
+        "Machine learning": 7,
+        "SQL": 6,
+        "ETL/ELT": 6,
+        "AWS": 5,
+        "Data modeling": 4,
+        "Data warehouse": 4,
+        "Scala": 3,
+        "Databricks": 3,
+        "Glue": 3,
+        "Terraform": 3,
+        "Docker": 3,
+        "Git": 3,
+        "PostgreSQL": 3,
+        "NoSQL": 3,
+        "Data lake/lakehouse": 3,
+        "Power BI/Tableau": 3,
+        "Linux": 3,
+        "Java": 2,
+        "Airflow": 2,
+        "Azure": 2,
+        "GCP": 2,
+        "Redshift": 2,
+        "Lambda": 2,
+        "CI/CD": 2,
+        "SQL Server": 2,
+        "Spark": 1,
+        "dbt": 1,
+        "Kafka": 1,
+        "Snowflake": 1,
+        "S3": 1,
+        "Kubernetes": 1,
+        "Oracle": 1
+      }
+    },
+    "Local related tech roles": {
+      "n": 63,
+      "arrangement": {
+        "remote": 4,
+        "hybrid": 11,
+        "on-site": 17,
+        "unknown": 31
+      },
+      "arrangement_of_stated": {
+        "remote": 0.125,
+        "hybrid": 0.344,
+        "on-site": 0.531
+      },
+      "median_salary": 111365,
+      "salary_n": 59,
+      "years": {
+        "0-1": 10,
+        "2-3": 15,
+        "4-5": 6,
+        "6+": 8
+      },
+      "years_n": 39,
+      "median_years": 3.0,
+      "skills": {
+        "Python": 35,
+        "SQL": 27,
+        "Git": 24,
+        "CI/CD": 19,
+        "Linux": 18,
+        "Java": 17,
+        "REST APIs": 17,
+        "Machine learning": 15,
+        "AWS": 14,
+        "Azure": 12,
+        "Docker": 12,
+        "Streaming": 10,
+        "Power BI/Tableau": 9,
+        "Kubernetes": 7,
+        "Scala": 6,
+        "SQL Server": 6,
+        "Data modeling": 6,
+        "Terraform": 5,
+        "PostgreSQL": 5,
+        "Kafka": 4,
+        "Oracle": 4,
+        "ETL/ELT": 4,
+        "GCP": 3,
+        "Databricks": 3,
+        "Glue": 3,
+        "Lambda": 3,
+        "Data warehouse": 3,
+        "Data lake/lakehouse": 3,
+        "Airflow": 2,
+        "S3": 2,
+        "NoSQL": 2,
+        "GenAI/LLM": 2,
+        "Spark": 1,
+        "Snowflake": 1,
+        "Redshift": 1,
+        "Informatica": 1
+      }
+    },
+    "Virginia data engineering": {
+      "n": 150,
+      "arrangement": {
+        "remote": 17,
+        "hybrid": 38,
+        "on-site": 20,
+        "unknown": 75
+      },
+      "arrangement_of_stated": {
+        "remote": 0.227,
+        "hybrid": 0.507,
+        "on-site": 0.267
+      },
+      "median_salary": 143600,
+      "salary_n": 146,
+      "years": {
+        "0-1": 13,
+        "2-3": 56,
+        "4-5": 30,
+        "6+": 23
+      },
+      "years_n": 122,
+      "median_years": 3.0,
+      "skills": {
+        "Python": 93,
+        "SQL": 92,
+        "ETL/ELT": 77,
+        "Data modeling": 73,
+        "AWS": 71,
+        "Machine learning": 70,
+        "Azure": 61,
+        "Data warehouse": 57,
+        "Spark": 50,
+        "Streaming": 50,
+        "Databricks": 48,
+        "GCP": 42,
+        "Data lake/lakehouse": 42,
+        "REST APIs": 40,
+        "Snowflake": 38,
+        "CI/CD": 38,
+        "Git": 33,
+        "Java": 30,
+        "NoSQL": 30,
+        "Airflow": 29,
+        "Redshift": 28,
+        "Scala": 23,
+        "Power BI/Tableau": 23,
+        "Glue": 21,
+        "GenAI/LLM": 20,
+        "Kafka": 18,
+        "Terraform": 17,
+        "Docker": 15,
+        "Kubernetes": 15,
+        "S3": 14,
+        "PostgreSQL": 14,
+        "Linux": 14,
+        "Informatica": 12,
+        "dbt": 11,
+        "Palantir": 9,
+        "Lambda": 8,
+        "Oracle": 6,
+        "SQL Server": 6
+      }
+    },
+    "US data engineering": {
+      "n": 150,
+      "arrangement": {
+        "remote": 37,
+        "hybrid": 38,
+        "on-site": 12,
+        "unknown": 63
+      },
+      "arrangement_of_stated": {
+        "remote": 0.425,
+        "hybrid": 0.437,
+        "on-site": 0.138
+      },
+      "median_salary": 132824,
+      "salary_n": 146,
+      "years": {
+        "0-1": 9,
+        "2-3": 47,
+        "4-5": 33,
+        "6+": 31
+      },
+      "years_n": 120,
+      "median_years": 4.0,
+      "skills": {
+        "SQL": 117,
+        "Python": 116,
+        "Data modeling": 89,
+        "ETL/ELT": 77,
+        "Data warehouse": 68,
+        "Spark": 58,
+        "Azure": 52,
+        "CI/CD": 52,
+        "Machine learning": 52,
+        "AWS": 51,
+        "Streaming": 50,
+        "Snowflake": 49,
+        "Data lake/lakehouse": 44,
+        "Databricks": 43,
+        "Git": 41,
+        "REST APIs": 41,
+        "Airflow": 39,
+        "GCP": 36,
+        "Power BI/Tableau": 30,
+        "Kafka": 25,
+        "Java": 24,
+        "dbt": 23,
+        "Redshift": 23,
+        "PostgreSQL": 19,
+        "GenAI/LLM": 18,
+        "Scala": 17,
+        "NoSQL": 17,
+        "S3": 15,
+        "Terraform": 15,
+        "SQL Server": 15,
+        "Oracle": 13,
+        "Linux": 12,
+        "Glue": 11,
+        "Lambda": 11,
+        "Kubernetes": 9,
+        "Docker": 7,
+        "Informatica": 6,
+        "Palantir": 3
+      }
+    }
+  },
+  "entry_level": {
+    "n": 70,
+    "median_years": 4.0,
+    "share_0_1": 0.129
+  },
+  "latest_local": [
+    {
+      "posted": "2026-10-09",
+      "title": "Data Engineer, Senior",
+      "company": "Booz Allen Hamilton",
+      "location": "Charlottesville, VA 22911",
+      "url": "https://www.indeed.com/viewjob?jk=1d1f85c0d3584b18",
+      "group": "Local data engineering",
+      "arrangement": "hybrid"
+    },
+    {
+      "posted": "2026-10-09",
+      "title": "Software Engineering Manager",
+      "company": "RoShay Services",
+      "location": "Radford, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-manager-at-roshay-services-4477889003",
+      "group": "Local related tech roles",
+      "arrangement": "hybrid"
+    },
+    {
+      "posted": "2026-10-09",
+      "title": "Data Engineer",
+      "company": "BeaconFire Inc.",
+      "location": "Blacksburg, VA",
+      "url": "https://www.linkedin.com/jobs/view/data-engineer-at-beaconfire-inc-4475232463",
+      "group": "Local data engineering",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-08",
+      "title": "Senior Data Scientist / Data Engineer / AI Engineer\u2013 TS/SCI  CI Poly (Hybrid)",
+      "company": "DAn Solutions",
+      "location": "Charlottesville, VA",
+      "url": "https://www.linkedin.com/jobs/view/senior-data-scientist-data-engineer-ai-engineer%E2%80%93-ts-sci-ci-poly-hybrid-at-dan-solutions-4477446607",
+      "group": "Local related tech roles",
+      "arrangement": "hybrid"
+    },
+    {
+      "posted": "2026-10-08",
+      "title": "Software Engineer II",
+      "company": "Twenty-Six Defense",
+      "location": "Roanoke, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-ii-at-twenty-six-defense-4444930089",
+      "group": "Local related tech roles",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-08",
+      "title": "Senior Software Engineer",
+      "company": "Volvo Group",
+      "location": "Salem, VA",
+      "url": "https://www.linkedin.com/jobs/view/senior-software-engineer-at-volvo-group-4477413437",
+      "group": "Local related tech roles",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-06",
+      "title": "Data Scientist - Mid (Sensor Technician)",
+      "company": "GRVTY",
+      "location": "Charlottesville, Virginia, United States",
+      "url": "https://job-boards.greenhouse.io/grvty/jobs/4435026009",
+      "group": "Local related tech roles",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-06",
+      "title": "Senior Data Scientist / Data Engineer / AI Engineer\u2013 TS/SCI + CI Poly (Hybrid)",
+      "company": "Dan Solutions",
+      "location": "Charlottesville, VA 22911",
+      "url": "https://www.indeed.com/viewjob?jk=82c4986bdde0e26f",
+      "group": "Local related tech roles",
+      "arrangement": "hybrid"
+    },
+    {
+      "posted": "2026-10-06",
+      "title": "Robotic Software Engineer- Perception and Autonomy",
+      "company": "Framatome North America",
+      "location": "Lynchburg, VA 24502",
+      "url": "https://www.indeed.com/viewjob?jk=4a25ac50180c414b",
+      "group": "Local related tech roles",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-06",
+      "title": "Data Analyst",
+      "company": "Prestige Consumer Healthcare",
+      "location": "Lynchburg, VA",
+      "url": "https://www.linkedin.com/jobs/view/data-analyst-at-prestige-consumer-healthcare-4474949563",
+      "group": "Local related tech roles",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-06",
+      "title": "Embedded Software Engineer",
+      "company": "SPECTRAFORCE",
+      "location": "Lynchburg, VA",
+      "url": "https://www.linkedin.com/jobs/view/embedded-software-engineer-at-spectraforce-4476306284",
+      "group": "Local related tech roles",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-06",
+      "title": "Software Development Engineer",
+      "company": "CloudFit Software",
+      "location": "Lynchburg, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-at-cloudfit-software-4389777649",
+      "group": "Local related tech roles",
+      "arrangement": "unknown"
+    }
+  ]
+}

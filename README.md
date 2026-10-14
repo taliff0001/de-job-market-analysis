@@ -1,0 +1,44 @@
+# Data engineering job market: Southwest Virginia vs. the US
+
+How data engineering jobs around Roanoke compare with Virginia and the country: where the work happens (remote, hybrid, on-site), what it pays, what skills postings name, and how much experience they ask for.
+
+**Live dashboard:** [tommyaliff.com/job-market](https://tommyaliff.com/job-market/)
+
+## What's in here
+
+| File | What it does |
+|---|---|
+| `pull_jobspipe.py` | Pulls job postings from the JobsPipe API into `data/raw/`, one JSON file per slice. |
+| `explore.ipynb` | The exploration notebook: loading, checking the remote/hybrid fields, building the posting/slice bridge table. |
+| `build_dashboard_data.py` | The cleaned-up version of the notebook. Writes `data/dashboard.json`, which the dashboard reads. |
+| `analyze_snapshot.py` | Skill and experience patterns shared by the other scripts, plus an older per-slice text report. |
+
+## Decisions worth knowing about
+
+- **Location matching.** Matching on town names in the location text pulled in Roanoke, Texas, Salem, Oregon and Bradford, England. Local groups are now filtered to Virginia, which left 8 genuine local data engineering postings out of 24.
+- **Duplicates are memberships, not errors.** One posting can belong to several slices (a Charlottesville job is both local and Virginia). Postings are deduplicated once, and a separate `id`/`slice` bridge table keeps every membership.
+- **Unknown stays visible.** Work arrangement comes from the source's own field where it's filled, then from phrases in the description. About half of Virginia postings say nothing; they're shown as *unknown* instead of being guessed.
+- **Comparable samples.** The Virginia and US groups use the same titles, the same 90-day window and no seniority or remote filter. Two earlier US samples (entry-level only, remote only) were skewed and are left out of the comparison.
+- **The source disagrees with itself.** About 1 in 7 postings returned by the API's remote filter are labeled hybrid, on-site or unknown in the source's own arrangement field.
+
+## Known gaps
+
+- The arrangement classifier hasn't been scored against hand-labeled postings yet.
+- The same job posted on two sites can appear twice under different IDs.
+- Each group is a capped sample of recent postings, not a count of every job.
+
+## Run it
+
+```bash
+uv venv && source .venv/bin/activate
+uv pip install -r requirements.txt
+echo "JOBSPIPE_API_KEY=your_key" > .env      # free key at jobspipe.dev
+python3 pull_jobspipe.py                     # or name one slice: python3 pull_jobspipe.py us_all_de
+python3 build_dashboard_data.py
+```
+
+Raw postings from JobsPipe can't be redistributed, so `data/raw/` isn't in the repo; the pull script recreates it with your own key.
+
+## Next
+
+A daily Airflow pipeline (Adzuna API → Postgres → this dashboard) is planned as Tutorial 02 in [airflow_postgres_etl_starter_code](https://github.com/taliff0001/airflow_postgres_etl_starter_code).
