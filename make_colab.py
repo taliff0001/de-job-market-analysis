@@ -32,7 +32,7 @@ code("""
 # 2. Your JobsPipe API key (hidden prompt; not stored in the notebook)
 from getpass import getpass
 if not os.environ.get("JOBSPIPE_API_KEY"):
-    os.environ["JOBSPIPE_API_KEY"] = getpass("JobsPipe API key: ")
+    os.environ["JOBSPIPE_API_KEY"] = getpass("JobsPipe API key: ").strip().strip("'\\"").split("=")[-1]
 print("Key set." if os.environ["JOBSPIPE_API_KEY"] else "No key entered.")
 """),
 code("""
@@ -54,7 +54,11 @@ todo = [n for n in PULL if REFRESH or not (pj.OUT / f"{n}.json").exists()]
 if todo:
     import sys
     sys.argv = ["pull_jobspipe.py", *todo]
-    pj.main()
+    try:
+        pj.main()
+    except SystemExit as e:                # the pull script exits with a message on API errors
+        print("Pull stopped:", e)
+        print("If it says the key is invalid: re-run cell 2 and paste only the key (it starts with jp_live_).")
 else:
     print("Already pulled; set REFRESH = True to pull again.")
 """),
