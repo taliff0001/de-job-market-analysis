@@ -31,9 +31,11 @@ print("Working in", os.getcwd())
 code("""
 # 2. Your JobsPipe API key (hidden prompt; not stored in the notebook)
 from getpass import getpass
-if not os.environ.get("JOBSPIPE_API_KEY"):
-    os.environ["JOBSPIPE_API_KEY"] = getpass("JobsPipe API key: ").strip().strip("'\\"").split("=")[-1]
-print("Key set." if os.environ["JOBSPIPE_API_KEY"] else "No key entered.")
+entered = getpass("JobsPipe API key (press Enter to keep one already set): ").strip().strip("'\\"").split("=")[-1]
+if entered:
+    os.environ["JOBSPIPE_API_KEY"] = entered
+key = os.environ.get("JOBSPIPE_API_KEY", "")
+print(f"Key set ({key[:8]}…, {len(key)} chars)." if key else "No key entered.")
 """),
 code("""
 # 3. Pull postings. Slice name -> how many postings (credits) at most.
