@@ -73,6 +73,7 @@ code("""
 import pandas as pd
 import build_dashboard_data as b
 
+assert list(b.RAW.glob("*.json")), "No postings in data/raw yet: the pull in cell 3 didn't finish. Check its output (usually the API key)."
 postings, membership = b.load()
 postings = b.derive(postings)
 g = b.grouped(postings, membership)        # one row per posting per dashboard group
