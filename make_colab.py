@@ -23,6 +23,9 @@ import os, pathlib
 if not pathlib.Path("build_dashboard_data.py").exists():
     !git clone -q https://github.com/taliff0001/de-job-market-analysis.git
     os.chdir("de-job-market-analysis")
+import sys
+if os.getcwd() not in sys.path:          # so `import pull_jobspipe` works after the chdir
+    sys.path.insert(0, os.getcwd())
 print("Working in", os.getcwd())
 """),
 code("""
