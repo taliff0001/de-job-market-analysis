@@ -25,6 +25,16 @@ ORDER = list(dict.fromkeys(GROUPS.values()))
 ARRANGEMENTS = ["remote", "hybrid", "on-site", "unknown"]
 
 
+def tidy_location(loc):
+    """Display form 'City, VA': boards write 'Charlottesville, Virginia, United States' or 'Roanoke, VA 24011'."""
+    if not isinstance(loc, str):
+        return ""
+    loc = re.sub(r",?\s*(United States|USA|US)\s*$", "", loc.strip(), flags=re.I)
+    loc = re.sub(r"\bVirginia\b", "VA", loc)
+    loc = re.sub(r"\s+\d{5}(-\d{4})?\s*$", "", loc)           # trailing ZIP
+    return re.sub(r"\s*,\s*", ", ", loc).strip(" ,")
+
+
 def load():
     frames = []
     for f in sorted(RAW.glob("*.json")):
@@ -95,10 +105,15 @@ def main():
 
     entry = postings[postings["seniority"].eq("entry_level")]["min_years"].dropna()
     local = g[g["group"].str.startswith("Local")].drop_duplicates(subset="id")
-    local = local.sort_values("date_posted", ascending=False).head(12)
+    local = local.sort_values("date_posted", ascending=False)
+    # Reposts: the same company and title a few days apart, sometimes with a casing or
+    # punctuation difference ("DAn Solutions" vs "Dan Solutions"). Keep the newest.
+    norm = lambda s: s.fillna("").str.lower().str.replace(r"[^a-z0-9]+", " ", regex=True).str.strip()
+    local = local.assign(_k=norm(local["company"]) + "|" + norm(local["job_title"]))
+    local = local.drop_duplicates(subset="_k").head(12)
     # Public fields only: no recruiter names/emails or other personal data leave this script.
     latest = [{"posted": str(r.date_posted)[:10], "title": r.job_title, "company": r.company,
-               "location": r.short_location or r.location, "url": r.url,
+               "location": tidy_location(r.short_location or r.location), "url": r.url,
                "group": r.group, "arrangement": r.arrangement} for r in local.itertuples()]
 
     out = {

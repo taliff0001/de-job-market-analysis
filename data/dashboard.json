@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14T18:02:36+00:00",
+  "generated": "2026-10-15T17:17:09+00:00",
   "source": "JobsPipe (full descriptions), postings from the last 90 days",
   "total_postings": 363,
   "total_pulled": 960,
@@ -264,7 +264,7 @@
       "posted": "2026-10-09",
       "title": "Data Engineer, Senior",
       "company": "Booz Allen Hamilton",
-      "location": "Charlottesville, VA 22911",
+      "location": "Charlottesville, VA",
       "url": "https://www.indeed.com/viewjob?jk=1d1f85c0d3584b18",
       "group": "Local data engineering",
       "arrangement": "hybrid"
@@ -318,25 +318,16 @@
       "posted": "2026-10-06",
       "title": "Data Scientist - Mid (Sensor Technician)",
       "company": "GRVTY",
-      "location": "Charlottesville, Virginia, United States",
+      "location": "Charlottesville, VA",
       "url": "https://job-boards.greenhouse.io/grvty/jobs/4435026009",
       "group": "Local related tech roles",
       "arrangement": "unknown"
     },
     {
       "posted": "2026-10-06",
-      "title": "Senior Data Scientist / Data Engineer / AI Engineer\u2013 TS/SCI + CI Poly (Hybrid)",
-      "company": "Dan Solutions",
-      "location": "Charlottesville, VA 22911",
-      "url": "https://www.indeed.com/viewjob?jk=82c4986bdde0e26f",
-      "group": "Local related tech roles",
-      "arrangement": "hybrid"
-    },
-    {
-      "posted": "2026-10-06",
       "title": "Robotic Software Engineer- Perception and Autonomy",
       "company": "Framatome North America",
-      "location": "Lynchburg, VA 24502",
+      "location": "Lynchburg, VA",
       "url": "https://www.indeed.com/viewjob?jk=4a25ac50180c414b",
       "group": "Local related tech roles",
       "arrangement": "unknown"
@@ -367,6 +358,15 @@
       "url": "https://www.linkedin.com/jobs/view/software-development-engineer-at-cloudfit-software-4389777649",
       "group": "Local related tech roles",
       "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-05",
+      "title": "IT Software Developer I-II - Senior",
+      "company": "Western Virginia Water Authority",
+      "location": "Roanoke, VA",
+      "url": "https://www.indeed.com/viewjob?jk=73260a5a449f344f",
+      "group": "Local related tech roles",
+      "arrangement": "on-site"
     }
   ]
 }
