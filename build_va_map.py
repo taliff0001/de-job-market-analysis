@@ -166,3 +166,15 @@ document.querySelector('#tbl tbody').innerHTML = DATA.counties.map(c =>
 (ROOT / "va_map.html").write_text(html)
 print(f"wrote va_map.html: {len(counties)} counties/cities, {de_total} DE ads, {de_100} within 100 mi, {unmapped} unmapped")
 print(counties.head(8).to_string(index=False))
+
+
+# --- Dashboard map data (10/17) -------------------------------------------------------------
+# Aggregated county counts only (no ad text), for the map panel on tommyaliff.com/job-market.
+SITE_JSON = pathlib.Path.home() / "githubio" / "taliff0001.github.io" / "assets" / "data" / "va-map.json"
+de_counties = counties[counties["de"] > 0][["county", "lat", "lon", "de"]].round({"lat": 4, "lon": 4})
+SITE_JSON.write_text(json.dumps({
+    "source": "Adzuna API, 90 days to " + last,
+    "de_total": de_total, "de_unmapped": int(((va["kind"] == "DE") & va["county"].isna()).sum()),
+    "counties": de_counties.to_dict("records"),
+}, indent=1))
+print(f"wrote {SITE_JSON} ({len(de_counties)} counties with DE postings)")
