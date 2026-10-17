@@ -6,3 +6,9 @@ data/snapshot_report.md
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
+# Any .env copy or editor backup (e.g. .env.save) holds API keys; never commit one.
+.env.*
+!.env.example
+# Adzuna results are licensed data, like data/raw/: keep derived copies local too.
+data/adzuna_ads.csv
+data/va_map_cities.csv
