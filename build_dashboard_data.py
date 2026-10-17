@@ -17,7 +17,7 @@ RAW, OUT = HERE / "data" / "raw", HERE / "data" / "dashboard.json"
 GROUPS = {  # slice -> dashboard group (us_entry_de / us_remote_de are skewed samples: left out)
     "local_de_towns": "Local data engineering",
     "local_de_metros": "Local data engineering",
-    "local_adjacent": "Local related tech roles",
+    "local_adjacent": "Local software engineering",   # 10/17: software titles only (was all related tech)
     "virginia_de": "Virginia data engineering",
     "us_all_de": "US data engineering",
 }
@@ -72,6 +72,12 @@ def grouped(postings, membership):
     g = membership.assign(group=membership["slice"].map(GROUPS)).dropna(subset=["group"])
     g = g.merge(postings, on="id")
     g = g[~g["group"].str.startswith("Local") | g["in_va"]]   # local groups: Virginia only
+    # 10/17 (Tommy): compare data engineering with SOFTWARE engineering, not "related tech".
+    # Keep software titles; drop ones that are data engineering under a software title
+    # (e.g. Torc's "Software Engineer, II - Data Engineering"), which the Local DE group already has.
+    title = g["job_title"].fillna("")
+    is_swe = title.str.contains(r"\bsoftware\b", case=False) & ~title.str.contains(r"data engineer", case=False)
+    g = g[(g["group"] != "Local software engineering") | is_swe]
     g = g.drop_duplicates(subset=["id", "group"])                # towns + metros overlap
     # 10/17: the same company + title listed more than once (reposts a few days apart, or one
     # opening listed for several cities) counts once per group, newest kept. Before this,

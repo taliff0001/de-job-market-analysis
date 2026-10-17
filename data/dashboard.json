@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-17T22:08:29+00:00",
+  "generated": "2026-10-17T22:13:59+00:00",
   "pulled": "2026-10-14T17:25:29+00:00",
   "source": "JobsPipe (full descriptions), postings from the last 90 days",
-  "total_postings": 320,
+  "total_postings": 304,
   "total_pulled": 960,
   "groups": {
     "Local data engineering": {
@@ -64,66 +64,57 @@
         "Oracle": 1
       }
     },
-    "Local related tech roles": {
-      "n": 62,
+    "Local software engineering": {
+      "n": 43,
       "arrangement": {
-        "remote": 4,
-        "hybrid": 10,
-        "on-site": 17,
-        "unknown": 31
+        "remote": 1,
+        "hybrid": 8,
+        "on-site": 14,
+        "unknown": 20
       },
       "arrangement_of_stated": {
-        "remote": 0.129,
-        "hybrid": 0.323,
-        "on-site": 0.548
+        "remote": 0.043,
+        "hybrid": 0.348,
+        "on-site": 0.609
       },
-      "median_salary": 111295,
-      "salary_n": 58,
+      "median_salary": 115225,
+      "salary_n": 40,
       "years": {
-        "0-1": 10,
-        "2-3": 14,
-        "4-5": 6,
-        "6+": 8
+        "0-1": 6,
+        "2-3": 9,
+        "4-5": 5,
+        "6+": 5
       },
-      "years_n": 38,
+      "years_n": 25,
       "median_years": 3.0,
       "skills": {
-        "Python": 34,
-        "SQL": 26,
-        "Git": 24,
-        "CI/CD": 19,
-        "Linux": 18,
+        "Git": 21,
+        "Python": 19,
         "Java": 17,
-        "REST APIs": 17,
-        "AWS": 14,
-        "Machine learning": 14,
-        "Azure": 12,
-        "Docker": 12,
+        "CI/CD": 15,
+        "Linux": 15,
+        "REST APIs": 15,
+        "SQL": 13,
+        "AWS": 11,
+        "Azure": 11,
         "Streaming": 10,
-        "Power BI/Tableau": 8,
+        "Docker": 9,
         "Kubernetes": 7,
-        "SQL Server": 6,
-        "Scala": 5,
-        "Terraform": 5,
-        "Data modeling": 5,
+        "Machine learning": 7,
+        "Scala": 4,
         "Kafka": 4,
-        "PostgreSQL": 4,
-        "Oracle": 4,
-        "ETL/ELT": 4,
+        "SQL Server": 4,
         "GCP": 3,
-        "Databricks": 3,
-        "Glue": 3,
-        "Lambda": 3,
-        "Data warehouse": 3,
-        "Data lake/lakehouse": 3,
-        "Airflow": 2,
-        "S3": 2,
-        "NoSQL": 2,
-        "GenAI/LLM": 2,
-        "Spark": 1,
-        "Snowflake": 1,
+        "Terraform": 3,
+        "Data modeling": 2,
         "Redshift": 1,
-        "Informatica": 1
+        "Glue": 1,
+        "S3": 1,
+        "PostgreSQL": 1,
+        "Oracle": 1,
+        "Data lake/lakehouse": 1,
+        "Power BI/Tableau": 1,
+        "GenAI/LLM": 1
       }
     },
     "Virginia data engineering": {
@@ -207,8 +198,8 @@
       "salary_n": 129,
       "years": {
         "0-1": 7,
-        "2-3": 41,
-        "4-5": 27,
+        "2-3": 40,
+        "4-5": 28,
         "6+": 28
       },
       "years_n": 103,
@@ -218,7 +209,7 @@
         "Python": 97,
         "Data modeling": 77,
         "ETL/ELT": 67,
-        "Data warehouse": 59,
+        "Data warehouse": 58,
         "Spark": 52,
         "AWS": 49,
         "Azure": 49,
@@ -272,15 +263,6 @@
     },
     {
       "posted": "2026-10-09",
-      "title": "Software Engineering Manager",
-      "company": "RoShay Services",
-      "location": "Radford, VA",
-      "url": "https://www.linkedin.com/jobs/view/software-engineering-manager-at-roshay-services-4477889003",
-      "group": "Local related tech roles",
-      "arrangement": "hybrid"
-    },
-    {
-      "posted": "2026-10-09",
       "title": "Data Engineer",
       "company": "BeaconFire Inc.",
       "location": "Blacksburg, VA",
@@ -289,21 +271,12 @@
       "arrangement": "unknown"
     },
     {
-      "posted": "2026-10-08",
-      "title": "Senior Software Engineer",
-      "company": "Volvo Group",
-      "location": "Salem, VA",
-      "url": "https://www.linkedin.com/jobs/view/senior-software-engineer-at-volvo-group-4477413437",
-      "group": "Local related tech roles",
-      "arrangement": "unknown"
-    },
-    {
-      "posted": "2026-10-08",
-      "title": "Senior Data Scientist / Data Engineer / AI Engineer\u2013 TS/SCI  CI Poly (Hybrid)",
-      "company": "DAn Solutions",
-      "location": "Charlottesville, VA",
-      "url": "https://www.linkedin.com/jobs/view/senior-data-scientist-data-engineer-ai-engineer%E2%80%93-ts-sci-ci-poly-hybrid-at-dan-solutions-4477446607",
-      "group": "Local related tech roles",
+      "posted": "2026-10-09",
+      "title": "Software Engineering Manager",
+      "company": "RoShay Services",
+      "location": "Radford, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-manager-at-roshay-services-4477889003",
+      "group": "Local software engineering",
       "arrangement": "hybrid"
     },
     {
@@ -312,17 +285,26 @@
       "company": "Twenty-Six Defense",
       "location": "Roanoke, VA",
       "url": "https://www.linkedin.com/jobs/view/software-engineer-ii-at-twenty-six-defense-4444930089",
-      "group": "Local related tech roles",
+      "group": "Local software engineering",
       "arrangement": "unknown"
     },
     {
-      "posted": "2026-10-06",
-      "title": "Data Scientist - Mid (Sensor Technician)",
-      "company": "GRVTY",
-      "location": "Charlottesville, VA",
-      "url": "https://job-boards.greenhouse.io/grvty/jobs/4435026009",
-      "group": "Local related tech roles",
+      "posted": "2026-10-08",
+      "title": "Senior Software Engineer",
+      "company": "Volvo Group",
+      "location": "Salem, VA",
+      "url": "https://www.linkedin.com/jobs/view/senior-software-engineer-at-volvo-group-4477413437",
+      "group": "Local software engineering",
       "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-08",
+      "title": "Senior Data Scientist / Data Engineer / AI Engineer\u2013 TS/SCI  CI Poly (Hybrid)",
+      "company": "DAn Solutions",
+      "location": "Charlottesville, VA",
+      "url": "https://www.linkedin.com/jobs/view/senior-data-scientist-data-engineer-ai-engineer%E2%80%93-ts-sci-ci-poly-hybrid-at-dan-solutions-4477446607",
+      "group": "Local data engineering",
+      "arrangement": "hybrid"
     },
     {
       "posted": "2026-10-06",
@@ -330,25 +312,7 @@
       "company": "Framatome North America",
       "location": "Lynchburg, VA",
       "url": "https://www.indeed.com/viewjob?jk=4a25ac50180c414b",
-      "group": "Local related tech roles",
-      "arrangement": "unknown"
-    },
-    {
-      "posted": "2026-10-06",
-      "title": "Software Development Engineer",
-      "company": "CloudFit Software",
-      "location": "Lynchburg, VA",
-      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-at-cloudfit-software-4389777649",
-      "group": "Local related tech roles",
-      "arrangement": "unknown"
-    },
-    {
-      "posted": "2026-10-06",
-      "title": "Data Analyst",
-      "company": "Prestige Consumer Healthcare",
-      "location": "Lynchburg, VA",
-      "url": "https://www.linkedin.com/jobs/view/data-analyst-at-prestige-consumer-healthcare-4474949563",
-      "group": "Local related tech roles",
+      "group": "Local software engineering",
       "arrangement": "unknown"
     },
     {
@@ -357,7 +321,16 @@
       "company": "SPECTRAFORCE",
       "location": "Lynchburg, VA",
       "url": "https://www.linkedin.com/jobs/view/embedded-software-engineer-at-spectraforce-4476306284",
-      "group": "Local related tech roles",
+      "group": "Local software engineering",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-06",
+      "title": "Software Development Engineer",
+      "company": "CloudFit Software",
+      "location": "Lynchburg, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-at-cloudfit-software-4389777649",
+      "group": "Local software engineering",
       "arrangement": "unknown"
     },
     {
@@ -366,8 +339,26 @@
       "company": "Western Virginia Water Authority",
       "location": "Roanoke, VA",
       "url": "https://www.indeed.com/viewjob?jk=73260a5a449f344f",
-      "group": "Local related tech roles",
+      "group": "Local software engineering",
       "arrangement": "on-site"
+    },
+    {
+      "posted": "2026-10-05",
+      "title": "Robotics Software Engineer",
+      "company": "Framatome North America",
+      "location": "Lynchburg, VA",
+      "url": "https://www.indeed.com/viewjob?jk=0aa960767c3d94c0",
+      "group": "Local software engineering",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-05",
+      "title": "Principal Robotics Software Engineer",
+      "company": "Framatome North America",
+      "location": "Lynchburg, VA",
+      "url": "https://www.indeed.com/viewjob?jk=82977819965334c4",
+      "group": "Local software engineering",
+      "arrangement": "unknown"
     }
   ]
 }
