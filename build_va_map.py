@@ -26,6 +26,9 @@ va = va.assign(county=area.str[2])                        # ["US","Virginia","Fa
 # CHECKED 10/17: Adzuna labels Richmond city "Richmond County" (a different, rural county on the
 # Northern Neck). The coordinates are Richmond city's, so fix the label.
 va.loc[va["county"].eq("Richmond County") & va["longitude"].gt(-77.6), "county"] = "Richmond (city)"
+# CHECKED 10/17: 2 ads labeled "Halifax County" (on the NC line, ~36.8 N) carry coordinates in
+# Tysons/Vienna, Fairfax County. Trust the coordinates.
+va.loc[va["county"].eq("Halifax County") & va["latitude"].gt(38.5), "county"] = "Fairfax County"
 unmapped = int(va["county"].isna().sum())                 # the "Virginia, US"-only ads
 mapped = va[va["county"].notna()]
 
