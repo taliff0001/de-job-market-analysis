@@ -83,6 +83,11 @@ def grouped(postings, membership):
     title = g["job_title"].fillna("")
     is_swe = title.str.contains(r"\bsoftware\b", case=False) & ~title.str.contains(r"data engineer", case=False)
     g = g[(g["group"] != "Local software engineering") | is_swe]
+    # 10/17 (Tommy): every data engineering group means the words "data engineer(ing)" in the
+    # title, same as the Adzuna counts. The JobsPipe pull also matched data architect, data
+    # platform, etc.; about a third of VA/US were those, some not engineering jobs at all.
+    is_de_group = g["group"].str.endswith("data engineering")
+    g = g[~is_de_group | g["job_title"].fillna("").str.contains(r"data engineer", case=False)]
     g = g.drop_duplicates(subset=["id", "group"])                # towns + metros overlap
     # 10/17: the same company + title listed more than once (reposts a few days apart, or one
     # opening listed for several cities) counts once per group, newest kept. Before this,
