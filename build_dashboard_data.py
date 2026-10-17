@@ -72,6 +72,11 @@ def grouped(postings, membership):
     g = membership.assign(group=membership["slice"].map(GROUPS)).dropna(subset=["group"])
     g = g.merge(postings, on="id")
     g = g[~g["group"].str.startswith("Local") | g["in_va"]]   # local groups: Virginia only
+    # 10/17 (Tommy): Charlottesville is two hours from Roanoke, not local. Local = the Roanoke,
+    # Lynchburg and Blacksburg-Christiansburg metros (JobsPipe metro 16820 is Charlottesville).
+    loc = (g["short_location"].fillna("") + " " + g["location"].fillna("")).str.lower()
+    cville = g["metro_code"].astype(str).eq("16820") | loc.str.contains(r"charlottesville|albemarle|earlysville|crozet")
+    g = g[~(g["group"].str.startswith("Local") & cville)]
     # 10/17 (Tommy): compare data engineering with SOFTWARE engineering, not "related tech".
     # Keep software titles; drop ones that are data engineering under a software title
     # (e.g. Torc's "Software Engineer, II - Data Engineering"), which the Local DE group already has.

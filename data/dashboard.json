@@ -1,117 +1,100 @@
 {
-  "generated": "2026-10-17T22:13:59+00:00",
+  "generated": "2026-10-17T22:28:15+00:00",
   "pulled": "2026-10-14T17:25:29+00:00",
   "source": "JobsPipe (full descriptions), postings from the last 90 days",
-  "total_postings": 304,
+  "total_postings": 284,
   "total_pulled": 960,
   "groups": {
     "Local data engineering": {
-      "n": 7,
+      "n": 3,
       "arrangement": {
         "remote": 2,
-        "hybrid": 3,
-        "on-site": 1,
+        "hybrid": 0,
+        "on-site": 0,
         "unknown": 1
       },
       "arrangement_of_stated": {
-        "remote": 0.333,
-        "hybrid": 0.5,
-        "on-site": 0.167
+        "remote": 1.0,
+        "hybrid": 0.0,
+        "on-site": 0.0
       },
-      "median_salary": 126888,
-      "salary_n": 6,
+      "median_salary": 125850,
+      "salary_n": 3,
       "years": {
         "0-1": 1,
-        "2-3": 3,
+        "2-3": 0,
         "4-5": 0,
-        "6+": 1
+        "6+": 0
       },
-      "years_n": 5,
-      "median_years": 3.0,
+      "years_n": 1,
+      "median_years": 0.0,
       "skills": {
-        "Python": 7,
-        "ETL/ELT": 6,
-        "Machine learning": 6,
-        "SQL": 5,
-        "AWS": 5,
-        "Data warehouse": 4,
-        "Databricks": 3,
-        "Glue": 3,
-        "Terraform": 3,
-        "Docker": 3,
-        "Git": 3,
-        "NoSQL": 3,
-        "Data modeling": 3,
-        "Data lake/lakehouse": 3,
-        "Linux": 3,
-        "Java": 2,
-        "Scala": 2,
-        "Airflow": 2,
-        "Azure": 2,
-        "GCP": 2,
-        "Redshift": 2,
+        "Python": 3,
+        "ETL/ELT": 3,
+        "AWS": 2,
+        "Databricks": 2,
+        "Glue": 2,
         "Lambda": 2,
+        "Terraform": 2,
+        "Docker": 2,
         "CI/CD": 2,
-        "PostgreSQL": 2,
-        "SQL Server": 2,
-        "Power BI/Tableau": 2,
-        "Spark": 1,
-        "dbt": 1,
-        "Kafka": 1,
-        "Snowflake": 1,
-        "S3": 1,
-        "Kubernetes": 1,
-        "Oracle": 1
+        "NoSQL": 2,
+        "Data warehouse": 2,
+        "Data lake/lakehouse": 2,
+        "Linux": 2,
+        "Machine learning": 2,
+        "SQL": 1,
+        "Airflow": 1,
+        "Git": 1,
+        "Oracle": 1,
+        "SQL Server": 1
       }
     },
     "Local software engineering": {
-      "n": 43,
+      "n": 26,
       "arrangement": {
-        "remote": 1,
-        "hybrid": 8,
-        "on-site": 14,
-        "unknown": 20
+        "remote": 0,
+        "hybrid": 6,
+        "on-site": 6,
+        "unknown": 14
       },
       "arrangement_of_stated": {
-        "remote": 0.043,
-        "hybrid": 0.348,
-        "on-site": 0.609
+        "remote": 0.0,
+        "hybrid": 0.5,
+        "on-site": 0.5
       },
-      "median_salary": 115225,
-      "salary_n": 40,
+      "median_salary": 109581,
+      "salary_n": 26,
       "years": {
-        "0-1": 6,
-        "2-3": 9,
-        "4-5": 5,
-        "6+": 5
+        "0-1": 1,
+        "2-3": 5,
+        "4-5": 4,
+        "6+": 3
       },
-      "years_n": 25,
-      "median_years": 3.0,
+      "years_n": 13,
+      "median_years": 5.0,
       "skills": {
-        "Git": 21,
-        "Python": 19,
-        "Java": 17,
-        "CI/CD": 15,
-        "Linux": 15,
-        "REST APIs": 15,
-        "SQL": 13,
-        "AWS": 11,
-        "Azure": 11,
-        "Streaming": 10,
-        "Docker": 9,
-        "Kubernetes": 7,
-        "Machine learning": 7,
-        "Scala": 4,
-        "Kafka": 4,
+        "SQL": 11,
+        "Linux": 11,
+        "Git": 10,
+        "Python": 7,
+        "Java": 6,
+        "Azure": 6,
+        "Streaming": 6,
+        "AWS": 5,
+        "REST APIs": 5,
+        "Machine learning": 5,
+        "CI/CD": 4,
         "SQL Server": 4,
-        "GCP": 3,
-        "Terraform": 3,
-        "Data modeling": 2,
+        "Docker": 3,
+        "Terraform": 2,
+        "Kubernetes": 2,
+        "GCP": 1,
         "Redshift": 1,
         "Glue": 1,
         "S3": 1,
-        "PostgreSQL": 1,
         "Oracle": 1,
+        "Data modeling": 1,
         "Data lake/lakehouse": 1,
         "Power BI/Tableau": 1,
         "GenAI/LLM": 1
@@ -254,11 +237,11 @@
   "latest_local": [
     {
       "posted": "2026-10-09",
-      "title": "Data Engineer, Senior",
-      "company": "Booz Allen Hamilton",
-      "location": "Charlottesville, VA",
-      "url": "https://www.indeed.com/viewjob?jk=1d1f85c0d3584b18",
-      "group": "Local data engineering",
+      "title": "Software Engineering Manager",
+      "company": "RoShay Services",
+      "location": "Radford, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-manager-at-roshay-services-4477889003",
+      "group": "Local software engineering",
       "arrangement": "hybrid"
     },
     {
@@ -269,15 +252,6 @@
       "url": "https://www.linkedin.com/jobs/view/data-engineer-at-beaconfire-inc-4475232463",
       "group": "Local data engineering",
       "arrangement": "unknown"
-    },
-    {
-      "posted": "2026-10-09",
-      "title": "Software Engineering Manager",
-      "company": "RoShay Services",
-      "location": "Radford, VA",
-      "url": "https://www.linkedin.com/jobs/view/software-engineering-manager-at-roshay-services-4477889003",
-      "group": "Local software engineering",
-      "arrangement": "hybrid"
     },
     {
       "posted": "2026-10-08",
@@ -296,15 +270,6 @@
       "url": "https://www.linkedin.com/jobs/view/senior-software-engineer-at-volvo-group-4477413437",
       "group": "Local software engineering",
       "arrangement": "unknown"
-    },
-    {
-      "posted": "2026-10-08",
-      "title": "Senior Data Scientist / Data Engineer / AI Engineer\u2013 TS/SCI  CI Poly (Hybrid)",
-      "company": "DAn Solutions",
-      "location": "Charlottesville, VA",
-      "url": "https://www.linkedin.com/jobs/view/senior-data-scientist-data-engineer-ai-engineer%E2%80%93-ts-sci-ci-poly-hybrid-at-dan-solutions-4477446607",
-      "group": "Local data engineering",
-      "arrangement": "hybrid"
     },
     {
       "posted": "2026-10-06",
@@ -344,6 +309,15 @@
     },
     {
       "posted": "2026-10-05",
+      "title": "Principal Robotics Software Engineer",
+      "company": "Framatome North America",
+      "location": "Lynchburg, VA",
+      "url": "https://www.indeed.com/viewjob?jk=82977819965334c4",
+      "group": "Local software engineering",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-05",
       "title": "Robotics Software Engineer",
       "company": "Framatome North America",
       "location": "Lynchburg, VA",
@@ -352,11 +326,20 @@
       "arrangement": "unknown"
     },
     {
-      "posted": "2026-10-05",
-      "title": "Principal Robotics Software Engineer",
-      "company": "Framatome North America",
+      "posted": "2026-10-03",
+      "title": "Software Engineer Intern",
+      "company": "L3Harris Technologies",
       "location": "Lynchburg, VA",
-      "url": "https://www.indeed.com/viewjob?jk=82977819965334c4",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-l3harris-technologies-4466704071",
+      "group": "Local software engineering",
+      "arrangement": "unknown"
+    },
+    {
+      "posted": "2026-10-01",
+      "title": "Software Engineer",
+      "company": "GE Vernova",
+      "location": "Roanoke, VA",
+      "url": "https://www.indeed.com/viewjob?jk=d00c9ce8f09ac7f3",
       "group": "Local software engineering",
       "arrangement": "unknown"
     }
