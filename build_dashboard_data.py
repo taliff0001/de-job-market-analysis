@@ -38,6 +38,8 @@ def tidy_location(loc):
 def load():
     frames = []
     for f in sorted(RAW.glob("*.json")):
+        if f.name.startswith("adzuna_"):      # Adzuna pulls live here too; they're summarized separately
+            continue
         part = pd.DataFrame(json.loads(f.read_text()))
         part["slice"] = f.stem
         frames.append(part)
@@ -70,7 +72,15 @@ def grouped(postings, membership):
     g = membership.assign(group=membership["slice"].map(GROUPS)).dropna(subset=["group"])
     g = g.merge(postings, on="id")
     g = g[~g["group"].str.startswith("Local") | g["in_va"]]   # local groups: Virginia only
-    return g.drop_duplicates(subset=["id", "group"])             # towns + metros overlap
+    g = g.drop_duplicates(subset=["id", "group"])                # towns + metros overlap
+    # 10/17: the same company + title listed more than once (reposts a few days apart, or one
+    # opening listed for several cities) counts once per group, newest kept. Before this,
+    # Virginia had 25 repeats in 150, the US 19, and the local 8 counted "DAn Solutions" and
+    # "Dan Solutions" separately.
+    norm = lambda s: s.fillna("").str.lower().str.replace(r"[^a-z0-9]+", " ", regex=True).str.strip()
+    g = g.assign(_k=norm(g["company"]) + "|" + norm(g["job_title"]))
+    g = g.sort_values("date_posted", ascending=False).drop_duplicates(subset=["group", "_k"])
+    return g.drop(columns="_k")
 
 
 def bucket(y):
@@ -118,6 +128,10 @@ def main():
 
     out = {
         "generated": pd.Timestamp.now(tz="UTC").isoformat(timespec="seconds"),
+        # when the JobsPipe data was pulled (newest raw file), which is what the page should show,
+        # not when this script last ran
+        "pulled": max(pd.Timestamp(f.stat().st_mtime, unit="s", tz="UTC")
+                      for f in RAW.glob("*.json") if not f.name.startswith("adzuna")).isoformat(timespec="seconds"),
         "source": "JobsPipe (full descriptions), postings from the last 90 days",
         "total_postings": int(g["id"].nunique()),   # postings in the groups shown, not every pull
         "total_pulled": int(postings["id"].nunique()),
